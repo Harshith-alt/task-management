@@ -39,14 +39,6 @@ npm start
 
 ---
 
-### Run PostgreSQL Locally (Optional with Docker)
-
-```bash
-docker run --name taskdb -e POSTGRES_PASSWORD=yourpass -e POSTGRES_DB=taskdb -p 5432:5432 -d postgres
-```
-
----
-
 ## 📁 Folder Structure
 
 ```
