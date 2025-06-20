@@ -9,6 +9,21 @@ router.get("/", async (req, res) => {
   res.json(tasks);
 });
 
+router.get("/tasks/:id", async (req, res) => {
+  try {
+    const task = await taskRepository.findOneBy({ id: req.params.id });
+    if (!task) {
+      return res.status(404).json({ message: "Task not found" });
+    }
+    res.json(task);
+  } catch (err) {
+    console.error(err);
+    res
+      .status(500)
+      .json({ message: "Error fetching task", error: err.message });
+  }
+});
+
 router.post("/", async (req, res) => {
   const { title, description, status, dueDate } = req.body;
   if (!title || !status) {
