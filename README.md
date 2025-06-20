@@ -37,13 +37,6 @@ npm start
 
 > Backend server will run at: [http://localhost:3001](http://localhost:3001)
 
-#### Create `.env` file in `/backend`:
-
-```env
-DATABASE_URL=postgres://postgres:yourpass@localhost:5432/taskdb
-PORT=3001
-```
-
 ---
 
 ### Run PostgreSQL Locally (Optional with Docker)
